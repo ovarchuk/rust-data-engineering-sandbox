@@ -9,13 +9,14 @@ install:
 
 build:
 	mdbook build rust-data-engineering-sandbox
+	#cargo build
 
 serve:
 	mdbook serve -p 8000 -n 127.0.0.1 rust-data-engineering-sandbox 
 
 format:
 	@echo "Formatting all projects with cargo"
-	./format.sh
+	chmod +x ./format.sh && ./format.sh
 
 lint:
 	@echo "Linting all projects with cargo"
@@ -24,7 +25,7 @@ lint:
 
 test:
 	@echo "Testing all projects with cargo"
-	./test.sh
+	chmod +x ./test.sh && ./test.sh
 
 check-gpu-linux:
 	sudo lshw -C display
