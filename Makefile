@@ -21,7 +21,7 @@ format:
 lint:
 	@echo "Linting all projects with cargo"
 	@rustup component add clippy 2> /dev/null
-	./lint.sh
+	chmod +x ./lint.sh && ./lint.sh
 
 test:
 	@echo "Testing all projects with cargo"
